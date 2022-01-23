@@ -1,15 +1,14 @@
-package com.sarg;
+package com.sarg.assessment4;
 
-import com.sarg.assessment4.Assessment4;
-import com.sarg.assessment4.Unit;
-import com.sarg.assessment4.WeatherUtilImpl;
+
 import com.sarg.assessment4.model.Weather;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-class Assessment4Test {
+import static org.junit.jupiter.api.Assertions.*;
 
+class Assessment4Test {
 
     @Test
     void shouldCallWeatherUtil() throws InterruptedException {
@@ -32,7 +31,5 @@ class Assessment4Test {
         System.out.println(weatherUtil.getWeather().getUnit());
 
     }
-
-
 
 }

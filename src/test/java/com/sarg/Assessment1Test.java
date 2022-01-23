@@ -3,7 +3,10 @@ package com.sarg;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class Assessment1Test {
+
     String foundText = "Found";
     String notFoundText = "there is no 7 in the array";
 
@@ -34,6 +37,5 @@ class Assessment1Test {
         Assessment1 assessment1 = new Assessment1();
         Assertions.assertEquals(notFoundText, assessment1.findSeven(nums));
     }
-
 
 }

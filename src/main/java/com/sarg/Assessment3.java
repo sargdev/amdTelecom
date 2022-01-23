@@ -39,18 +39,45 @@ public class Assessment3 {
         return String.join(" ", newWordsList) + ".";
     }
 
-
-    private boolean startsWithVowel(String word) {
+    /**
+     * Checks if the word starts with a vowel
+     * @param word the word that is checked
+     * @return true if the word starts with vowel, otherwise false
+     * @throws Exception thrown if the word is null
+     */
+    private boolean startsWithVowel(String word) throws Exception {
+        if(word == null){
+            throw new Exception("word should not be null");
+        }
         return CHAR_VOWELS.indexOf(word.charAt(0)) >=0;
     }
 
-    private String addCharsToTheEnd(String word, String charsToBeAdded) {
+    /**
+     * Updates a word and add the specified characters at the end.
+     * @param word the word that is updated
+     * @param charsToBeAdded the character that the function adds at the end of the word
+     * @return the updated word
+     * @throws Exception thrown if the word is null
+     */
+    private String addCharsToTheEnd(String word, String charsToBeAdded) throws Exception {
+        if(word == null || charsToBeAdded == null){
+            throw new Exception("word or char to be added should not be null");
+        }
         return word + charsToBeAdded;
     }
 
-    private String moveFirstLetterToTheEnd(String word) {
+    /**
+     * Moves the first letter of the word to the end.
+     * @param word the word that is updated
+     * @return the updated word
+     * @throws Exception is thrown if the word is null
+     */
+    private String moveFirstLetterToTheEnd(String word) throws Exception {
+        if(word == null){
+            throw new Exception("word should not be null");
+        }
         boolean wordWithCapital = startsWithUppercase(word);
-        String convertedWord;
+        String convertedWord = "";
         int length = word.length();
         if (length <= 1) {
             return word;
@@ -65,7 +92,17 @@ public class Assessment3 {
 
     }
 
-    private boolean startsWithUppercase(String word){
+    /**
+     * Checks if the word starts with an uppercase letter.
+     * @param word the word to be checked.
+     * @return true if the word starts with uppercase, otherwise false.
+     * @throws Exception is thrown if the word is null
+     */
+    private boolean startsWithUppercase(String word) throws Exception {
+        if(word == null){
+            throw new Exception("word should not be null");
+        }
+
         return Character.isUpperCase(word.charAt(0));
     }
 }

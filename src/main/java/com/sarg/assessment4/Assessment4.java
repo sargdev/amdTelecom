@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.concurrent.TimeUnit.MINUTES;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Assessment4 {
@@ -18,8 +19,8 @@ public class Assessment4 {
         Weather weather = new Weather("Thessaloniki", Unit.CELSIUS);
 
         final ScheduledFuture<?> weatherHandle =
-                scheduler.scheduleAtFixedRate(new WeatherRunnable(new WeatherUtilImpl(weather),new SmsUtilImpl()), 0, 10, SECONDS);
-        scheduler.schedule(() -> { weatherHandle.cancel(true); }, 10 , SECONDS);
+                scheduler.scheduleAtFixedRate(new WeatherRunnable(new WeatherUtilImpl(weather),new SmsUtilImpl()), 0, 10, MINUTES);
+        scheduler.schedule(() -> { weatherHandle.cancel(true); }, 10 * 10 , MINUTES);
     }
 
 }
