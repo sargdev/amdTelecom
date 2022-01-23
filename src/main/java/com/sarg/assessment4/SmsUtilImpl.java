@@ -1,5 +1,6 @@
 package com.sarg.assessment4;
 
+import com.sarg.assessment4.misc.MyClient;
 import com.sarg.assessment4.misc.MyProperties;
 import com.sarg.assessment4.misc.Utils;
 import com.sarg.assessment4.model.Sms;
@@ -12,11 +13,14 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class SmsUtilImpl implements SmsUtil {
 
     private String token;
     private Sms sms;
+
+    Logger logger = Logger.getLogger(SmsUtilImpl.class.getName());
 
     HttpClient client = MyClient.getInstance().client;
 
@@ -43,13 +47,13 @@ public class SmsUtilImpl implements SmsUtil {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             if(response.statusCode() == 200){
-                System.out.println("response: " + response.body());
+                logger.info("response: " + response.body());
                 return true;
             } else {
                 throw new Error("Failed to send sms, error code: " + response.statusCode());
             }
         } catch (InterruptedException | IOException e) {
-            System.out.println("Exception occurred: " + e.getMessage());
+            logger.warning("Exception occurred: " + e.getMessage());
         }
         return false;
     }

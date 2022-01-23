@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="add properties file, refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/misc/MyProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="properties file and class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/MyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/misc/MyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642934669012</updated>
-      <workItem from="1642934670976" duration="13089000" />
+      <workItem from="1642934670976" duration="14399000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1642935978396</created>
@@ -190,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642952241493</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="properties file and class">
+      <created>1642952327440</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642952327440</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +221,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="add comments" />
     <MESSAGE value="add properties file, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="add properties file, refactoring" />
+    <MESSAGE value="properties file and class" />
+    <option name="LAST_COMMIT_MESSAGE" value="properties file and class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

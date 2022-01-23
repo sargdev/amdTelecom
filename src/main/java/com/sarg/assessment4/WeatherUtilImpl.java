@@ -1,5 +1,6 @@
 package com.sarg.assessment4;
 
+import com.sarg.assessment4.misc.MyClient;
 import com.sarg.assessment4.misc.MyProperties;
 import com.sarg.assessment4.misc.Utils;
 import com.sarg.assessment4.model.Weather;
@@ -9,10 +10,13 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.logging.Logger;
 
 public class WeatherUtilImpl implements WeatherUtil{
 
     private Weather weather;
+
+    Logger logger = Logger.getLogger(WeatherUtilImpl.class.getName());
 
     HttpClient client = MyClient.getInstance().client;
 
@@ -45,7 +49,7 @@ public class WeatherUtilImpl implements WeatherUtil{
                 throw new Error("Failed to retrieve weather, error code: " + response.statusCode());
             }
         } catch (InterruptedException | IOException e) {
-            System.out.println("Exception occurred: " + e.getMessage());
+            logger.warning("Exception occurred: " + e.getMessage());
         }
     }
 
