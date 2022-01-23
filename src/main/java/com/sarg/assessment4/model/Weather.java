@@ -3,7 +3,7 @@ package com.sarg.assessment4.model;
 
 //import temp.sarg.assessment4.Unit;
 
-import com.sarg.assessment4.Unit;
+import com.sarg.assessment4.misc.Unit;
 
 public class Weather {
 

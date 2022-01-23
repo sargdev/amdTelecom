@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="initial commit">
+    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="add comments">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/old pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sarg/assessment4/Assessment4Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/Assessment2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/Assessment2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/Assessment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/Assessment3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sarg/Assessment1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sarg/Assessment1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sarg/Assessment4Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amdTelecom-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/ClientSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/MyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -70,7 +65,7 @@
       <recent name="com.sarg" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Assessment4Test.shouldCallWeatherUtil">
+  <component name="RunManager" selected="JUnit.Assessment4Test.shouldUpdateWeatherWithTemperature">
     <configuration name="Assessment1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="amdTelecom" />
       <extension name="coverage">
@@ -82,22 +77,6 @@
       <option name="PACKAGE_NAME" value="com.sarg" />
       <option name="MAIN_CLASS_NAME" value="com.sarg.Assessment1Test" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Assessment1Test.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="amdTelecom" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sarg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sarg" />
-      <option name="MAIN_CLASS_NAME" value="com.sarg.Assessment1Test" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,7 +115,7 @@
       <module name="amdTelecom" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sarg.assessment4.*" />
+          <option name="PATTERN" value="com.sarg.assessment4.misc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,13 +127,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Assessment4Test.shouldUpdateWeatherWithTemperature" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="amdTelecom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sarg.assessment4.misc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sarg.assessment4" />
+      <option name="MAIN_CLASS_NAME" value="com.sarg.assessment4.Assessment4Test" />
+      <option name="METHOD_NAME" value="shouldUpdateWeatherWithTemperature" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Assessment4Test.shouldUpdateWeatherWithTemperature" />
         <item itemvalue="JUnit.Assessment4Test.shouldCallWeatherUtil" />
         <item itemvalue="JUnit.Assessment3Test" />
         <item itemvalue="JUnit.Assessment2Test" />
         <item itemvalue="JUnit.Assessment1Test" />
-        <item itemvalue="JUnit.Assessment1Test.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642934669012</updated>
-      <workItem from="1642934670976" duration="10152000" />
+      <workItem from="1642934670976" duration="12748000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1642935978396</created>
@@ -182,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642936059066</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add comments">
+      <created>1642949676067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642949676067</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +203,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comments" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

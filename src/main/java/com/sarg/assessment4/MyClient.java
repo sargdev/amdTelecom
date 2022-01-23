@@ -2,17 +2,17 @@ package com.sarg.assessment4;
 
 import java.net.http.HttpClient;
 
-public final class ClientSingleton {
+public final class MyClient {
 
-    private static ClientSingleton clientSingleton;
+    private static MyClient clientSingleton;
 
     public HttpClient client ;
 
-    private ClientSingleton() {}
+    private MyClient() {}
 
-    public static ClientSingleton getInstance(){
+    public static MyClient getInstance(){
         if(clientSingleton == null) {
-            clientSingleton = new ClientSingleton();
+            clientSingleton = new MyClient();
             clientSingleton.client = HttpClient.newHttpClient();
         }
 

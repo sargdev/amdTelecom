@@ -1,4 +1,4 @@
-package com.sarg.assessment4;
+package com.sarg.assessment4.misc;
 
 import org.json.JSONObject;
 

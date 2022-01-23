@@ -1,12 +1,11 @@
 package com.sarg.assessment4;
 
 
+import com.sarg.assessment4.misc.Unit;
 import com.sarg.assessment4.model.Weather;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class Assessment4Test {
 

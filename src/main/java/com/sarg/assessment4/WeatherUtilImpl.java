@@ -1,5 +1,7 @@
 package com.sarg.assessment4;
 
+import com.sarg.assessment4.misc.MyProperties;
+import com.sarg.assessment4.misc.Utils;
 import com.sarg.assessment4.model.Weather;
 
 import java.io.IOException;
@@ -10,12 +12,9 @@ import java.net.http.HttpResponse;
 
 public class WeatherUtilImpl implements WeatherUtil{
 
-    private final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
-    private final String WEATHER_APP_ID = "b385aa7d4e568152288b3c9f5c2458a5";
-
     private Weather weather;
 
-    HttpClient client = ClientSingleton.getInstance().client;
+    HttpClient client = MyClient.getInstance().client;
 
     public WeatherUtilImpl(Weather weather) {
         this.weather = weather;
@@ -26,7 +25,11 @@ public class WeatherUtilImpl implements WeatherUtil{
      */
     @Override
     public void updateWeather(){
-        String cityUrl = WEATHER_URL + "?q=" + weather.getCity() + "&appid=" + WEATHER_APP_ID;
+        String cityUrl = MyProperties.getInstance().getProperty("weather_url")
+                + "?q="
+                + weather.getCity()
+                + "&appid="
+                + MyProperties.getInstance().getProperty("weather_app_id");
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(cityUrl))
                 .GET()

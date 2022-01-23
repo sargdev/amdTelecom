@@ -1,5 +1,6 @@
 package com.sarg.assessment4;
 
+import com.sarg.assessment4.misc.Unit;
 import com.sarg.assessment4.model.Weather;
 
 import java.util.concurrent.Executors;
@@ -7,7 +8,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.concurrent.TimeUnit.MINUTES;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Assessment4 {
 

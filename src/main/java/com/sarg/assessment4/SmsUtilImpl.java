@@ -1,5 +1,7 @@
 package com.sarg.assessment4;
 
+import com.sarg.assessment4.misc.MyProperties;
+import com.sarg.assessment4.misc.Utils;
 import com.sarg.assessment4.model.Sms;
 import org.json.JSONObject;
 
@@ -13,16 +15,10 @@ import java.util.Map;
 
 public class SmsUtilImpl implements SmsUtil {
 
-    private static final String SMS_URL = "https://connect.routee.net/sms";
-    private final String AUTH_URL = "https://auth.routee.net/oauth/token";
-    private final String APPLICATION_ID = "5c5d5e28e4b0bae5f4accfec";
-    private final String APPLICATION_SECRET = "MGkNfqGud0";
-
     private String token;
     private Sms sms;
 
-    HttpClient client = ClientSingleton.getInstance().client;
-
+    HttpClient client = MyClient.getInstance().client;
 
     /**
      * Initially authenticates, then sends a sms.
@@ -39,7 +35,7 @@ public class SmsUtilImpl implements SmsUtil {
         }
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(SMS_URL))
+                .uri(URI.create(MyProperties.getInstance().getProperty("sms_url")))
                 .header("Authorization", "Bearer " + token)
                 .header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(sms.toString()))
@@ -63,13 +59,14 @@ public class SmsUtilImpl implements SmsUtil {
      * and updates the field token.
      */
     private void authenticate(){
-        String credentials = Utils.encodeBase64(APPLICATION_ID +":"+ APPLICATION_SECRET);
+        String credentials = Utils.encodeBase64(MyProperties.getInstance().getProperty("app_id")
+                +":"+ MyProperties.getInstance().getProperty("app_secret") );
 
         Map<Object, Object> parameters = new HashMap<>();
         parameters.put("grant_type", "client_credentials");
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(AUTH_URL))
+                .uri(URI.create(MyProperties.getInstance().getProperty("auth_url")))
                 .header("Authorization", "Basic " + credentials)
                 .header("content-type", "application/x-www-form-urlencoded")
                 .POST(Utils.ofFormData(parameters))
@@ -88,10 +85,6 @@ public class SmsUtilImpl implements SmsUtil {
         }
     }
 
-
-//    public Sms getSms() {
-//        return sms;
-//    }
 
     @Override
     public void setSms(Sms sms) {
