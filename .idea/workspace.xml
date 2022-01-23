@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="add comments">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/ClientSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/MyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/SmsUtilImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/WeatherUtilImpl.java" afterDir="false" />
+    <list default="true" id="45619e44-3496-4af5-ad6e-65b9bddb5c8c" name="Changes" comment="add properties file, refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sarg/assessment4/misc/MyProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sarg.assessment4.misc" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sarg" />
@@ -161,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642934669012</updated>
-      <workItem from="1642934670976" duration="12748000" />
+      <workItem from="1642934670976" duration="13089000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1642935978396</created>
@@ -184,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642949676067</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add properties file, refactoring">
+      <created>1642952241493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642952241493</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +210,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comments" />
+    <MESSAGE value="add properties file, refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="add properties file, refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
